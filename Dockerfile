@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y wget
 
 RUN wget https://github.com/gorcon/rcon-cli/releases/download/v0.10.3/rcon-0.10.3-amd64_linux.tar.gz
 RUN mkdir -p /opt/rcon
-RUN tar -xzf rcon-0.10.3-amd64_linux.tar.gz &&
-    mv rcon-0.10.3-amd64_linux/* /opt/rcon/
+RUN tar -xzf rcon-0.10.3-amd64_linux.tar.gz
+RUN mv rcon-0.10.3-amd64_linux/* /opt/rcon/
 RUN rm -rf rcon-0.10.3-amd64_linux.tar.gz rcon-0.10.3-amd64_linux
 RUN apt-get install -y fish curl nano python3-pip
 COPY ./save-game ./write-user-token /bin/
