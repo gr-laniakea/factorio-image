@@ -13,7 +13,8 @@ RUN tar -xzf rcon-0.10.3-amd64_linux.tar.gz
 RUN mv rcon-0.10.3-amd64_linux/* /opt/rcon/
 RUN rm -rf rcon-0.10.3-amd64_linux.tar.gz rcon-0.10.3-amd64_linux
 RUN apt-get install -y fish curl nano python3-pip
-COPY ./save-game ./write-user-token /bin/
+COPY ./save-game ./write-user-token
+COPY ./save-game /bin/save-game
 RUN chmod +x /bin/save-game /bin/write-user-token
 RUN python3 -m pip install --break-system-packages fac-cli
 COPY ./fac.config.ini /root/.config/fac/config.ini
