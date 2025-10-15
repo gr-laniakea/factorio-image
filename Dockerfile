@@ -1,4 +1,4 @@
-FROM factoriotools/factorio:2.0.60
+FROM factoriotools/factorio:2.0.69
 ARG USERNAME
 ARG TOKEN
 ENV FACTORIO_USERNAME=RecklessHeroism
